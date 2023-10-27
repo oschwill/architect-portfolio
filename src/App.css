@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color-primary: white;
+  --background-color-secondary: #333;
+  --font-color-primary: #333;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header,
+main {
+  padding: 2.5vh 5vw;
+}
+
+.active {
+  border-top: 1px solid var(---background-color-secondary);
+  border-bottom: 1px solid var(---background-color-secondary);
+}
