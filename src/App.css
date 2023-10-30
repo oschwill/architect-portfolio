@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Roboto;
+  src: url('./assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url('./assets/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: RobotoThin;
+  src: url('./assets/fonts/Roboto-Thin.ttf');
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,11 +22,17 @@
 :root {
   --background-color-primary: white;
   --background-color-secondary: #333;
+  --background-color-tertiary: #2c2c2c;
   --font-color-primary: #333;
+  --font-color-secondary: grey;
+  --font-color-tertiary: white;
+  --input-bg-color-primary: #f3f3f3;
+  --input-bg-color-secondary: white;
 }
 
 html {
   font-size: 62.5%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 header,
@@ -19,7 +40,22 @@ main {
   padding: 2.5vh 5vw;
 }
 
+button {
+  font-size: 1.2rem;
+}
+
+button svg {
+  padding-left: 15px;
+}
+
 .active {
-  border-top: 1px solid var(---background-color-secondary);
-  border-bottom: 1px solid var(---background-color-secondary);
+  padding: 5px;
+  border-top: 1px solid var(--background-color-secondary);
+  border-bottom: 1px solid var(--background-color-secondary);
+}
+
+.darkActive {
+  padding: 5px;
+  border-top: 1px solid var(--background-color-primary) !important;
+  border-bottom: 1px solid var(--background-color-primary) !important;
 }

@@ -18,6 +18,7 @@ const Loader = () => {
   return (
     <div className="loader">
       <img src={loaderGif} alt="loader" />
+      <h1>WELCOME TO OUR SITE</h1>
     </div>
   );
 };

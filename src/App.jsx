@@ -4,11 +4,30 @@ import Home from './pages/Home';
 import { useState } from 'react';
 import Loader from './components/utils/Loader';
 
-import { LoaderContext, ThemeContext } from './Context/Context';
+import { LoaderContext, ThemeContext, DarkModeContext } from './Context/Context';
+import Gallery from './pages/Gallery';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const darkModusStyles = {
+    general: {
+      backgroundColor: '#333',
+      color: 'white',
+      opacity: 1,
+    },
+    button: {
+      backgroundColor: 'white',
+      color: 'black',
+    },
+    form: {
+      backgroundColor: 'white',
+    },
+    border: {
+      borderTop: '1px solid white',
+    },
+  };
 
   return (
     <>
@@ -18,11 +37,14 @@ function App() {
         </LoaderContext.Provider>
       ) : (
         <ThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </BrowserRouter>
+          <DarkModeContext.Provider value={darkModusStyles}>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/gallery" element={<Gallery />} />
+              </Routes>
+            </BrowserRouter>
+          </DarkModeContext.Provider>
         </ThemeContext.Provider>
       )}
     </>

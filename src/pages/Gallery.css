@@ -1,0 +1,28 @@
+main .gallery-headline {
+  font-size: 6.4rem;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+main h2 .gallery-thin {
+  font-family: RobotoThin, Arial, Helvetica, sans-serif;
+  color: var(--font-color-secondary);
+  opacity: 0.5;
+}
+
+main h2 .gallery-fat {
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
+
+main .gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-bottom: 15%;
+  padding-top: 25px;
+  border-top: 1px solid var(--font-color-secondary);
+}
+
+main .gallery .gallery-item img {
+  width: 100%;
+}

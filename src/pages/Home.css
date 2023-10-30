@@ -1,3 +1,5 @@
+/*  HEADLINE */
+
 .headline {
   display: flex;
 }
@@ -14,25 +16,316 @@
 }
 
 .headline-right {
-  /* background: url('../assets/images/headline_image.jpeg') no-repeat; */
-  /* height: 75vh; */
-  /* background-position: center;
-  background-size: cover; */
   position: relative;
 }
 
 .headline-right img {
   width: 100%;
   z-index: 0;
-  max-height: 100%;
+  max-height: 80%;
 }
 
 .headline-right button {
   background-color: var(--background-color-primary);
   position: absolute;
-  bottom: 0;
+  border: none;
+  bottom: 20%;
   left: 0;
-  padding: 15px;
-  background: none;
+  padding: 20px;
   z-index: 10;
+}
+
+.headline-right button svg {
+  padding-left: 10px;
+}
+
+.headline .headline-left h1 {
+  font-size: 6.4rem;
+  width: 250px;
+}
+
+.headline .headline-left .headline-fat {
+  font-weight: 800;
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
+
+.headline .headline-left .headline-light {
+  font-family: RobotoThin, Arial, Helvetica, sans-serif;
+  color: var(--font-color-secondary);
+  opacity: 0.5;
+}
+
+/* ABOUT */
+main .main-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 30px;
+  margin: 0 10vw;
+}
+
+main .main-about .about-items:first-of-type img {
+  width: 80%;
+  max-height: 80%;
+  margin-bottom: 25px;
+}
+
+main .main-about .about-items:nth-child(2) img {
+  width: 100%;
+  height: 80%;
+  margin-top: 30px;
+}
+
+main .main-about .about-items:last-of-type h2 {
+  font-family: RobotoThin, Arial, Helvetica, sans-serif;
+  font-size: 6.4rem;
+  color: var(--font-color-secondary);
+  opacity: 0.5;
+}
+
+main .main-about .about-items:last-of-type p {
+  font-size: 1.6rem;
+  color: var(--font-color-secondary);
+  padding: 20px 0 50px 0;
+}
+
+main .main-about .about-items:last-of-type button {
+  background-color: var(--background-color-primary);
+  border: none;
+  padding: 20px;
+  z-index: 10;
+  margin-left: 15px;
+}
+
+/* FOCUS */
+main .main-focus {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 50px;
+  padding: 25px 0 25px 0;
+}
+
+main .main-focus .focus-item:first-of-type {
+  grid-column: 1/-1;
+}
+
+main .main-focus .focus-item:first-of-type h2 {
+  font-size: 6.4rem;
+  font-family: RobotoThin, Arial, Helvetica, sans-serif;
+  color: var(--font-color-secondary);
+  opacity: 0.5;
+}
+
+main .main-focus .focus-item:nth-child(2),
+main .main-focus .focus-item:nth-child(3) {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+main .main-focus .focus-item:nth-child(2) h2,
+main .main-focus .focus-item:nth-child(3) h2 {
+  font-size: 20rem;
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+  color: var(--font-color-secondary);
+  opacity: 0.25;
+}
+
+main .main-focus .focus-item p {
+  font-size: 2.2rem;
+  line-height: 36px;
+  width: 60%;
+}
+
+/* PROJECTS */
+main .main-projects .projects-button button,
+main .main-contact .contact-body .form button {
+  background-color: var(--background-color-secondary);
+  border: none;
+  padding: 20px;
+  z-index: 10;
+  margin-left: 15px;
+  color: var(--background-color-primary);
+  margin-top: 25px;
+}
+
+main .main-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+main .main-projects > h2 {
+  font-size: 6.4rem;
+  font-family: RobotoThin, Arial, Helvetica, sans-serif;
+  color: var(--font-color-secondary);
+  opacity: 0.5;
+}
+
+main .main-projects img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+}
+
+main .main-projects .projects-top,
+main .main-projects .projects-bottom,
+main .main-projects .projects-button {
+  display: flex;
+  gap: 25px;
+}
+
+main .main-projects .projects-top .first-image-background {
+  background: url('../assets/images/Project_image1.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  background-color: rgba(48, 45, 45, 0.5);
+  background-blend-mode: multiply;
+}
+
+main .main-projects .projects-top img:first-of-type {
+  background-color: red;
+  background-blend-mode: multiply;
+}
+
+main .main-projects .projects-top .first-image-background .image-description {
+  position: absolute;
+  bottom: 15%;
+  left: 7%;
+}
+
+main .main-projects .projects-top .first-image-background .image-description h2 {
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+  font-size: 6.4rem;
+  width: 250px;
+  color: var(--background-color-primary);
+}
+
+main .main-projects .projects-top .first-image-background .image-description button {
+  background: none;
+  border: none;
+  padding: 20px 20px 20px 0;
+  z-index: 10;
+  color: var(--background-color-primary);
+  margin-top: 5px;
+  text-align: left;
+}
+
+main .main-projects .projects-bottom img:first-of-type,
+main .main-projects .projects-bottom img:last-of-type {
+  width: 30%;
+}
+
+main .main-projects .projects-bottom img:nth-child(2) {
+  width: 39.9%;
+}
+
+main .main-projects .projects-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* CONTACT */
+main .main-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+main .main-contact h2 {
+  font-family: RobotoThin, Arial, Helvetica, sans-serif;
+  font-size: 6.4rem;
+  color: var(--font-color-secondary);
+  opacity: 0.5;
+}
+
+main .main-contact .contact-body {
+  display: flex;
+  gap: 25px;
+}
+
+main .main-contact .contact-body .form {
+  width: 30%;
+}
+main .main-contact .contact-body .contact-background {
+  width: 70%;
+}
+
+main .main-contact .contact-body .form label,
+main .main-contact .contact-body .form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+main .main-contact .contact-body .form input {
+  padding: 15px;
+  background-color: var(--input-bg-color-primary);
+  opacity: 1;
+  border: none;
+}
+
+main .main-contact .contact-body .form textarea {
+  width: 100%;
+  height: 170px;
+  padding: 15px;
+  margin-bottom: 50px;
+  background-color: var(--input-bg-color-primary);
+  border: none;
+  resize: none;
+}
+
+main .main-contact .contact-body .form input::-webkit-input-placeholder:after {
+  content: '*';
+  color: red;
+  font-size: 1.15rem;
+}
+
+main .main-contact .contact-body .contact-background img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+main .main-contact .contact-body .form button {
+  margin-left: 0;
+}
+
+main .main-contact .contact-body .form div {
+  position: relative;
+}
+
+main .main-contact .contact-body .form div h4 {
+  position: absolute;
+  color: red;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+main .main-contact .contact-body .form .phone h4 {
+  left: 21%;
+  top: 25%;
+}
+
+main .main-contact .contact-body .form .email h4 {
+  left: 11%;
+  top: 25%;
+}
+main .main-contact .contact-body .form .message h4 {
+  left: 13%;
+  top: 6%;
+}
+
+main .main-contact .contact-body .form .email:focus-within h4,
+main .main-contact .contact-body .form .phone:focus-within h4,
+main .main-contact .contact-body .form .message:focus-within h4 {
+  visibility: hidden;
+}
+
+main .main-contact .contact-body .form .phone input:not(:placeholder-shown) + h4,
+main .main-contact .contact-body .form .email input:not(:placeholder-shown) + h4,
+main .main-contact .contact-body .form .message textarea:not(:placeholder-shown) + h4 {
+  visibility: hidden;
 }
